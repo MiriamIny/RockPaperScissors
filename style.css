@@ -143,6 +143,14 @@ body {
     z-index: 2; /* Higher z-index to overlap #user */
     visibility: hidden;
 }
+#result p
+{
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color:rgb(243, 198, 223);
+    text-decoration-thickness: 3px;
+    text-align: center;
+}
 /*animation for button to change colors from pastel yellow to pastel pink */
 @keyframes change-colors 
 {
