@@ -32,7 +32,7 @@ This project implements a classic Rock, Paper, Scissors game using HTML, CSS, an
 #### Access Game
 
 1. Clone this repository or download the files.
-2. Open `https://miriaminy.github.io/RockPaperScissors/index` in web browser to play the game.
+2. Open `https://miriaminy.github.io/RockPaperScissors/` in web browser to play the game.
 
 #### Credits
 
