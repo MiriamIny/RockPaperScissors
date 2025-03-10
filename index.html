@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="assets//RockPaperScissors.gif">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- External JavaScript for confetti effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header class="text-center py-4">
+        <img src="assets//RockPaperScissors.gif" alt="logo">
+        <h1>Rock, Paper, Scissors</h1>
+    </header>
+
+    <div id="game-rules">
+
+        <h2>Game Rules:</h2>
+        <ul>
+            <li>Rock beats Scissors</li>
+            <li>Scissors beats Paper</li>
+            <li>Paper beats Rock</li>
+        </ul>
+
+        <!-- Instructions paragraph -->
+        <div class="paragraph">
+            <p>Rock. Paper. Scissors.</p>
+            <p>[You choose one. I choose one.]</p>  
+            <p>Shoot!</p> 
+            <p>[Winner is revealed!]</p>
+            <p>[If we choose the same option, it's a tie.]</p>
+        </div>
+
+        <p><strong>Think you can beat me?</strong> </p>
+
+    </div> <!-- End game-rules section -->
+
+    <button id="playButton" class= "animated-button" onClick="playGame(this)"> Click here to play! </button>
+
+    <!-- User's choice section with images -->
+    <div id="user">
+        <p>Click on your choice! Click the image or corresponding key: R for rock, P for paper, S for scissors.</p>
+        <img src="assets//rock.png" alt="rock" class="img-choice" onClick="chooseImage(this)">
+        <img src="assets//paper.png" alt="paper" class="img-choice" onClick="chooseImage(this)">
+        <img src="assets//scissors.png" alt="scissor" class="img-choice" onClick="chooseImage(this)">
+    </div>
+
+    <!-- Result display section -->
+    <div id="result">
+        <p id="userChoice"></p>
+        <p id="computerChoice"></p>
+        <p id="winner"></p>
+    </div>
+
+</body>
+</html>
