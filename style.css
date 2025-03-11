@@ -61,7 +61,7 @@ body {
 }
 .paragraph
 {
-    margin: 20px; /* margin for paragraph divider */
+    margin: 8px; /* margin for paragraph divider */
 }
 .paragraph p
 {
@@ -81,7 +81,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    padding: 20px;
+    padding: 10px;
     width: 80%;
 }
 
@@ -102,7 +102,7 @@ body {
 
 #game-rules ul li 
 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 18px;
     color: #555555;
 }
@@ -134,8 +134,20 @@ body {
     top: 710px; /* Push down to avoid overlap with game rules */
     z-index: 1; 
     visibility: hidden;
+    padding-bottom: 80px;
 }
 
+/* Result style and animation*/
+@keyframes change-font-size 
+{
+    from { font-size: 18px; }
+    to { font-size: 20px; }
+}
+@keyframes change-textdec-color
+{
+    from { text-decoration-color:rgb(241, 241, 155)}
+    to {text-decoration-color:rgb(243, 198, 223);} 
+}
 #result 
 {
     position: absolute;
@@ -147,12 +159,16 @@ body {
 {
     font-weight: bold;
     text-decoration: underline;
-    text-decoration-color:rgb(243, 198, 223);
     text-decoration-thickness: 3px;
     text-align: center;
+    animation-name: change-textdec-color, change-font-size;
+    animation-iteration-count: infinite;
+    animation-duration: 2s, .5s; /*change colors over 2s and change size over .5 s */
+    animation-timing-function: ease-in-out; /* smooth transition */
 }
+
 /*animation for button to change colors from pastel yellow to pastel pink */
-@keyframes change-colors 
+@keyframes change-bg-color
 {
     from {background-color:rgb(241, 241, 155);}
     to {background-color:rgb(243, 198, 223);} 
@@ -165,14 +181,14 @@ body {
 }
 .animated-button
 {
-   animation-name: change-colors, change-size; 
+   animation-name: change-bg-color, change-size; 
    animation-iteration-count: infinite; /* keep repeating! */
    animation-play-state: running;
    animation-duration: 2s, .5s; /*change colors over 2s and change size over .5 s */
-   margin-top: 20px;
    border: 2px solid #ddd;
    font-size: 16px;
 }
+
 /*************************************************************
  CSS ABOVE ADDED BY MIRIAM INY. (CSS below from free-css.com
  *************************************************************/
@@ -192,7 +208,7 @@ h1, h2, h3, h4, h5, h6
      letter-spacing: 0;
      font-weight: normal;
      position: relative;
-     padding: 0 0 10px 0;
+     padding: 0 0 8px 0;
      font-weight: normal;
      line-height: normal;
      color: #111111;
@@ -252,7 +268,7 @@ p {
      margin: 20px;
      font-weight: 300;
      font-size: 15px;
-     line-height: 24px;
+     line-height: 18px;
 }
 
 a {
