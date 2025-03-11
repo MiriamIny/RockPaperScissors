@@ -41,18 +41,18 @@
 
     </div> <!-- End game-rules section -->
 
-    <button id="playButton" class= "animated-button" onClick="playGame(this)"> Click here to play! </button>
+    <button id="playButton" class= "animated-button" > Click here to play! </button>
 
     <!-- User's choice section with images -->
     <div id="user">
         <p>Click on your choice! Click the image or corresponding key: R for rock, P for paper, S for scissors.</p>
-        <img src="assets//rock.png" alt="rock" class="img-choice" onClick="chooseImage(this)">
-        <img src="assets//paper.png" alt="paper" class="img-choice" onClick="chooseImage(this)">
-        <img src="assets//scissors.png" alt="scissor" class="img-choice" onClick="chooseImage(this)">
+        <img src="assets//rock.png" alt="rock" class="img-choice" id="rock">
+        <img src="assets//paper.png" alt="paper" class="img-choice" id="paper">
+        <img src="assets//scissors.png" alt="scissor" class="img-choice" id="scissor">
     </div>
 
     <!-- Result display section -->
-    <div id="result">
+    <div id="result" class="animated-result">
         <p id="userChoice"></p>
         <p id="computerChoice"></p>
         <p id="winner"></p>
